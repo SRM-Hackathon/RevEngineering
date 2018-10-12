@@ -1,0 +1,11 @@
+Application name	
+RecomMate.AI
+
+API key	
+b7e4cd326135060d2dc2aca003db3cf0
+
+Shared secret	
+8702313603d5be55e6845300d67bbbdd
+
+Registered to	
+SAURAV7SAHA
