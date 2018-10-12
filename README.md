@@ -1,3 +1,3 @@
 # RevEngineering
 
-Code written for SRM Hackathon 2018
+Submission for SRM Hackathon 2018
