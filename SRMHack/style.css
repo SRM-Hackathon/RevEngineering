@@ -1,0 +1,38 @@
+#navbar-main {
+	height: 80px; 
+	box-shadow: 5px 5px 5px #D3D3D3;
+}
+
+#basicExampleNav {
+	padding-left: 320px;
+}
+
+.nav-headings {
+	font-size: 20spx;
+}
+
+.nav-link:hover {
+	border-bottom: 5px blue;
+}
+
+#signin {
+	padding-left: 350px;
+}
+
+nav {
+	background-color: white;
+}
+	
+#showcase{
+  background-image:url('./images/bg4.jpg');
+  background-size:cover;
+  background-position:center;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:0 20px;
+}
+
