@@ -14,16 +14,15 @@ p {line-height: 2}
     min-height: 100%;
     background-position: center;
     background-size: cover;
+    background-color: rgba(0,0,0,0.3);
 }
 
-tint {
-  filter: sepia(100%) saturate(300%) brightness(70%) hue-rotate(180deg);
-}
-
+</*
 .bgimg {background-image: url('{% static "images/back.jpg"%}')}
 .bgimg2 {background-image: url("/w3images/flowers.jpg")}
+*/
 </style>
-<body>
+<body style="background-image: url('{% static "images/back.jpg"%}')";>
 
 <!-- Header / Home-->
 <header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">

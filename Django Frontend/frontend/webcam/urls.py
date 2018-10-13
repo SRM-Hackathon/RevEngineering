@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^emotion/$', views.emotion, name='emotion'),
     url(r'^textinput/$', views.textinput, name='textinput'),
     url(r'^about/$', views.about, name='about'),
+    url(r'^imgpredict/$', views.imgpredict, name='imgpredict'),
 
     #path('output', views.output, name='output'),
 ]

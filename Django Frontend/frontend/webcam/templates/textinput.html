@@ -6,6 +6,8 @@
   <meta charset="UTF-8">
   <title>Welcome Home</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
     input[type=submit] {
         background-color: #4CAF50;
@@ -46,15 +48,24 @@ input[type=text]:focus {
 <body id="bg" style="background-image: url('{% static "images/back.jpg"%}')";>
 
 
-  
+
 
 <div class="middle"></font>
 
-  <br><br><br><br><br><br><br><br>
+  <br><br><br>
+  <header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
 
+  <div class="w3-text-black w3-center">
+
+    <h2>Enter your Artist's name!</h2>
+
+  </div>
+</header>
+
+  <br><br><br>
   <form align='middle' method="post">
       {% csrf_token %}
-<input type="text" name="Article" placeholder="Enter any Artist Name">
+<input type="text" name="Article" placeholder="Artist Name">
 
 <input type="submit" name="ArticleS" value="Submit">
 

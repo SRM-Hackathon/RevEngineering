@@ -55,9 +55,14 @@ def textinput(request):
     if 'ArticleS' in request.POST:
         screenname = request.POST.get("Article", None)
         t=nameinput(screenname)
-        return render(request, 'output.html' ,{'output': t})
+        return render(request, 'emotion.html' ,{'emo': t})
 
     return render(request,'textinput.html')
+
+def imgpredict(request):
+    imglocation='Django Frontend/frontend/media/webcam/webcam.png'
+    predict=imglocation
+    return render(request,'output.html',{'output': predict})
 
 
 def simple_upload(request):
