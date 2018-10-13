@@ -55,7 +55,25 @@ def textinput(request):
     if 'ArticleS' in request.POST:
         screenname = request.POST.get("Article", None)
         t=nameinput(screenname)
-        return render(request, 'emotion.html' ,{'emo': t})
+        print("------------------------------")
+        print(t)
+        t0=t[0]
+        t1=t[1]
+        t2=t[2]
+        t3=t[3]
+        t4=t[4]
+        ll1=t[5]
+        ll2=t[6]
+        ll3=t[7]
+        ll4=t[8]
+        ll5=t[9]
+        a0=t[10]
+        a1=t[11]
+        a2=t[12]
+        a3=t[13]
+        a4=t[14]
+
+        return render(request, 'emotion.html' ,{'emo1': t0,'emo2': t1,'emo3': t2,'emo4': t3,'emo5': t4,'emo6': ll1,'emo7': ll2,'emo8': ll3,'emo9': ll4,'emo10': ll5,'emo11': a0,'emo12': a1,'emo13': a2,'emo14': a3,'emo15': a4,})
 
     return render(request,'textinput.html')
 
