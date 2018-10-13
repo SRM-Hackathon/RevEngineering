@@ -63,7 +63,3 @@ def detect(img):
 		return 1
 	else:
 		return 0
-
-
-x = cv2.imread('img1.jpg')
-print(detect(x))

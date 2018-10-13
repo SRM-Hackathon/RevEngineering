@@ -22,7 +22,7 @@ p {line-height: 2}
 .bgimg2 {background-image: url("/w3images/flowers.jpg")}
 */
 </style>
-<body style="background-image: url('{% static "images/back.jpg"%}')";>
+<body style="background-image: url('{% static "images/back.jpg" %}')";>
 
 <!-- Header / Home-->
 <header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
@@ -30,7 +30,7 @@ p {line-height: 2}
 
     <h1 class="w3-jumbo">RecomMate.ai</h1>
     <h2>Developed with love by RevEngineering</h2>
-    <h2><b>We caaare for you xD :')</b></h2>
+    
   </div>
 </header>
 
@@ -41,7 +41,7 @@ p {line-height: 2}
     <a href="{% url 'webcam' %}" style="width:20%" class="w3-bar-item w3-button">Webcam</a>
     <a href="{% url 'simple_upload' %}" style="width:20%" class="w3-bar-item w3-button">Image Upload</a>
         <a href="{% url 'textinput' %}" style="width:20%" class="w3-bar-item w3-button">Text Input</a>
-    <a href="{% url 'about' %}" style="width:20%" class="w3-bar-item w3-button w3-hover-black">About Us</a>
+    <a href="{% url 'about' %}" style="width:20%" class="w3-bar-item w3-button w3-hover-black">Personalized Recommendation</a>
   </div>
 </div>
 

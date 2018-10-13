@@ -1,13 +1,91 @@
-<!-- djangotemplates/example/templates/about.html-->
+{% load static %}
+<!DOCTYPE html>
 
-<{% load static %}!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>About Us</title>
+  <meta charset="UTF-8">
+  <title>Welcome Home</title>
+ 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+
+    }
+    input[type=text] {
+    width: 180px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: white;
+
+
+    padding: 12px 20px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 50%;
+}
+
+@font-face {
+    font-family: 'GothamBold';
+    src: url('{% static 'fonts/GothamBold.ttf' %}');
+
+  }
+
+
+    </style>
 </head>
-<body style="background-image: url('{% static "images/back.jpg"%}')";>
-  <h2 align='middle'>About RecomMate</h2>
-<h3 align='middle'>  <a href="{% url 'emotion' %}">Return to Home</a></h3>
+<body id="bg" style="background-image: url('{% static "images/back.jpg"%}')";>
+
+
+
+
+<div class="middle"></font>
+
+  <br><br><br>
+  <header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
+
+  <div class="w3-text-black w3-center">
+
+    <h2>Enter your Favorite Artist and Movie name!</h2>
+
+  </div>
+</header>
+
+  <br><br><br>
+  <form align='middle' method="post">
+      {% csrf_token %}
+<input type="text" name="Article" placeholder="Artist Name">
+
+<input type="submit" name="ArticleS" value="Submit">
+
+
+<input type="text" name="KeyWord" placeholder="Movie Name">
+
+<input type="submit" name="KeyWordS" value="Submit">
+<!--
+<input type="text" name="Website" placeholder="Specify http/https">
+
+<input type="submit" name="WebsiteS" value="Website"> -->
+
+
+</form>
+
+
+
+
+
+
+  </div>
 </body>
 </html>

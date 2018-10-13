@@ -9,6 +9,10 @@ from django.views.decorators.csrf import csrf_exempt
 import re
 import base64
 from webcam.lastfm_rec import nameinput
+from webcam.facemood import detect
+from webcam.movierec import get_recommendations,build_chart
+from webcam.getmood import GetMood
+
 text="Outside"
 
 class HomePageView(TemplateView):
@@ -17,7 +21,7 @@ class HomePageView(TemplateView):
 
 def output1(request):
         #py_obj = 10
-        py_obj=testmodel('F:\\facial-frontend\\frontend\\media\\'+uploaded_file_url)
+        py_obj=testmodel('F:/facial-frontend/frontend/media/'+uploaded_file_url)
         return render(request, 'output.html' ,{'output': py_obj})
 
 
@@ -26,32 +30,6 @@ def webcam(request):
     return render(request, 'webcam.html')
 
 def about(request):
-
-    return render(request, 'about.html')
-
-
-@csrf_exempt
-def imgdata(request):
-    if request.is_ajax():
-        url = request.POST.get('image_data')
-        print("Received!!!!!")
-        text="inside"
-
-        with open('/media/arkochatterjee/MISC/GitHub/SRMHackathon/RevEngineering/Django Frontend/frontend/media/webcam/webcam.png', 'wb') as f:
-            f.write(base64.decodestring(url.split(',')[1].encode()))
-        return render(request, 'index.html')
-    return render(request,'output.html',{'output':'Not Received'})
-
-
-def emotion(request):
-    text="Hey! I'm inside!"
-    return render(request,'index0.html')
-
-
-
-
-
-def textinput(request):
     if 'ArticleS' in request.POST:
         screenname = request.POST.get("Article", None)
         t=nameinput(screenname)
@@ -75,12 +53,61 @@ def textinput(request):
 
         return render(request, 'emotion.html' ,{'emo1': t0,'emo2': t1,'emo3': t2,'emo4': t3,'emo5': t4,'emo6': ll1,'emo7': ll2,'emo8': ll3,'emo9': ll4,'emo10': ll5,'emo11': a0,'emo12': a1,'emo13': a2,'emo14': a3,'emo15': a4,})
 
+   
+
+    if 'KeyWordS' in request.POST:
+        screenname1 = request.POST.get("KeyWord", None)
+        k=get_recommendations(screenname1)
+        t0=k[0]
+        t1=k[1]
+        t2=k[2]
+        t3=k[3]
+        t4=k[4]
+
+        return render(request, 'emotion1.html',{'emo1': t0,'emo2': t1,'emo3': t2,'emo4': t3,'emo5': t4})
+
+    return render(request,'about.html')
+
+
+
+@csrf_exempt
+def imgdata(request):
+    if request.is_ajax():
+        url = request.POST.get('image_data')
+        print("Received!!!!!")
+        text="inside"
+
+        with open('D:/Machine Learning/Dirty/RevEngineering/Django Frontend/frontend/media/webcam/webcam.png', 'wb') as f:
+            f.write(base64.decodestring(url.split(',')[1].encode()))
+        return render(request, 'index.html')
+    return render(request,'output.html',{'output':'Not Received'})
+
+
+def emotion(request):
+    text="Hey! I'm inside!"
+    return render(request,'index0.html')
+
+
+
+
+
+def textinput(request):
+    if 'ArticleS' in request.POST:
+        screenname = request.POST.get("Article", None)
+        t=GetMood(screenname)
+        return render(request,'output.html',{'output':t})
+   
+
     return render(request,'textinput.html')
 
 def imgpredict(request):
-    imglocation='Django Frontend/frontend/media/webcam/webcam.png'
-    predict=imglocation
-    return render(request,'output.html',{'output': predict})
+    
+    predict=detect("D:/Machine Learning/Dirty/RevEngineering/Django Frontend/frontend/media/webcam/webcam.png")
+    if predict==0:
+        text="You are Sad :("
+    else:
+        text="Such a jolly person you are!"
+    return render(request,'output.html',{'output': text})
 
 
 def simple_upload(request):
@@ -89,7 +116,9 @@ def simple_upload(request):
         fs = FileSystemStorage()
         filename = fs.save(myfile.name, myfile)
         uploaded_file_url = (filename)
-        #py_obj=testmodel('media\\'+uploaded_file_url)
-        return render(request, 'output.html' ,{'output': 'hey'})
+        print(uploaded_file_url)
+        pred=detect("D:/Machine Learning/Dirty/RevEngineering/Django Frontend/frontend/media/"+uploaded_file_url)
+        #py_obj=testmodel('media/'+uploaded_file_url)
+        return render(request, 'output.html' ,{'output': pred})
 
     return render(request, 'simple_upload.html')

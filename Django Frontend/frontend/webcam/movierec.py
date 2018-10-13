@@ -9,8 +9,6 @@ import string
 
 idx = 0
 
-
-#import data
 with open("D:/Machine Learning/Dirty/RevEngineering/Django Frontend/frontend/webcam/cosine.pkl",'rb') as f:
     cosine_sim = pickle.load(f)
 with open("D:/Machine Learning/Dirty/RevEngineering/Django Frontend/frontend/webcam/index.pkl",'rb') as f:
@@ -86,25 +84,27 @@ def get_recommendations(title):
     
     except:
         idx = 0
-#         print(4)
-#         print("Not Available. Searching for best fit.")
-        try:
-            idx = tit2id[title]
-        except:
-            #only for if no match  
-            for index, row in df.iterrows():
-                title = title.replace('[{}]'.format(string.punctuation), '')
-                title = title.lower()
-                if contains(row['title'],title):
-                    print(row['title'])
-                    idx = row['index']
-                    break
+#        
+        #only for if no match  
+        for index, row in df.iterrows():
+            title = title.replace('[{}]'.format(string.punctuation), '')
+            title = title.lower()
+            if contains(row['title'],title):
+                print(row['title'])
+                idx = row['index']
+                break
             
         sim_scores = list(enumerate(cosine_sim[idx]))
         sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
         sim_scores = sim_scores[1:31]
         movie_indices = [i[0] for i in sim_scores]
-        return titles.iloc[movie_indices]
+
+
+        movie = titles.iloc[movie_indices]
+        dfnew = pd.DataFrame({'index':movie.index, 'list':movie.values})
+        getlist = dfnew['list'].tolist()
+        return(getlist[0:5])
+
 
 def build_chart(genre, percentile=0.85):
     df = gen_md[gen_md['genre'] == genre]
@@ -121,3 +121,5 @@ def build_chart(genre, percentile=0.85):
     qualified = qualified.sort_values('wr', ascending=False).head(250)
     
     return qualified
+
+print(get_recommendations("Colonia"))
