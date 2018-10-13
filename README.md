@@ -24,13 +24,23 @@ A Recommendation System web app which has been made detects facial expressions o
 ### Usage
 
 ```bash
-git clone
-cd
+git clone https://github.com/SRM-Hackathon/RevEngineering.git
+cd Django Frontend/frontend
 python manage.py runserver
 ```
 
 This will start the local server at localhost:8000.
 
-_*Deps*: sklearn, pandas, django, requests, bs4_
+_*Deps*: 
+pylast
+numpy
+imutils
+imageio
+matplotlib
+textblob
+Django
+pandas
+Keras
+scikit_learn 
 
 
