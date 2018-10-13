@@ -1,8 +1,6 @@
 Made by _Abhilash Pal_, _Saurav Saha_, _Sounak Bhattacharya_, _Arko Chatterjee_, _Sukrit Bhattacharya_
 # SRM Hackathon 2018 | RecomMate.ai | RevEngineering
 
-[Demo video]<br>
-
 ## Problem Statement
 
 Physical fitness is the key concern of today’s generation. It is the state of well-being and the ability to perform aspects of sports for top notch athletes and daily activities and tasks for other professionals such as those in the IT sector. One can be physically fit when he/she is mentally fit. Thus the common mass also demands products that will help in maintaining and tracking their physical/mental fitness. In today's busy and competitive world, most employees tend to be mentally stressed out. Thus a system has to be made which helps in reducing the mental stress so that a person can be physically as well as mentally fit. Statistics in recent times about the mental fitness of the population have provided us with some important conclusions. 1 in 5 people in the country need some kind of psychiatric or psycological attention. 45% or the corporate professionals suffer from some form of depression and this might transform into clinical depression if left unattended.
@@ -32,6 +30,7 @@ The RecomMate.ai web-app detects the user's emotions through a facial recognitio
 ```bash
 git clone https://github.com/SRM-Hackathon/RevEngineering.git
 cd Django Frontend/frontend
+pip install requirements.txt
 python manage.py runserver
 ```
 
