@@ -87,8 +87,9 @@ def nameinput(name):
 
                             sub_tr_l.append(str(n))
                             cou=1
-                #sub_tracks.append(str(sub_tr_l))
-                sub_tracks=sub_tracks+(sub_tr_l)
+                sub_tracks.append(str(sub_tr_l))
+                #sub_tracks=sub_tracks+(sub_tr_l)
+                #print(sub_tracks)
                 sub_tr_l=[]
                 c=1
             #print(type(y))
@@ -103,5 +104,5 @@ def nameinput(name):
     #art_l displays similar artists
     print(art_l)
 
-    xx=sub_tracks
+    xx=track_prime+sub_tracks+art_l
     return xx
