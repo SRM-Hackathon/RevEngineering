@@ -122,4 +122,3 @@ def build_chart(genre, percentile=0.85):
     
     return qualified
 
-print(get_recommendations("Colonia"))

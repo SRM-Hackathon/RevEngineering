@@ -21,14 +21,14 @@ p {line-height: 2}
 .bgimg {background-image: url('{% static "images/back.jpg"%}')}
 .bgimg2 {background-image: url("/w3images/flowers.jpg")}
 </style>
-<body style="background-image: url('{% static "images/back.jpg"%}');  background-color: rgba(0,0,0,0.3);
+<body style="background-image: url('{% static "images/stats-bg.jpg"%}');  background-color: rgba(0,0,0,0.3);
 }";>
   <br>
-  <h3>Hi there! Here are some recommended song for you!
+  <font color="white"><h3>Hi there! Here are some recommended song for you!
   </h3>
   <h3>Your choice</h3>
   <hr>
-  <font color="grey">{{ emo1 }}</font><br>
+  {{ emo1 }}<br>
   {{ emo2 }}<br>
   {{ emo3 }}<br>
   {{ emo4 }}<br>
@@ -48,7 +48,7 @@ p {line-height: 2}
   {{ emo7 }}<br><br>
   {{ emo8 }}<br><br>
   {{ emo9 }}<br><br>
-{{ emo10 }}<br><br>
+{{ emo10 }}<br><br></font>
   <br>
   <br>
   <br>

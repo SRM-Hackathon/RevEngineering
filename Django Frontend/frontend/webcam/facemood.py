@@ -1,3 +1,6 @@
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+import tensorflow as tf 
 from keras.models import model_from_json
 import cv2
 import matplotlib.pyplot as plt
@@ -8,7 +11,6 @@ with open('D:/Machine Learning/Dirty/RevEngineering/Django Frontend/frontend/web
 model.load_weights('D:/Machine Learning/Dirty/RevEngineering/Django Frontend/frontend/webcam/weights.h5')
 
 face_cascade=cv2.CascadeClassifier('D:/Machine Learning/Dirty/RevEngineering/Django Frontend/frontend/webcam/haarcascade_frontalface_default.xml')
-
 def detect(url):
 	p = cv2.imread(url,1)
 	f= 0
@@ -23,7 +25,6 @@ def detect(url):
 	    #cv2.imshow('Press v to click',image)
 	    image = cv2.resize(image,(200,200), interpolation = cv2.INTER_CUBIC)
 
-
 	if f==1:
 		print("with haarcascade_frontalface_default")
 		image.resize(1,64,64,1)
@@ -32,7 +33,7 @@ def detect(url):
 		print("without haarcascade_frontalface_default")
 		p.resize(1,64,64,1)
 		pr = model.predict(p)
-	print(pr)
+
 	# predict = pr[0]*10000000
 	# for i in range(len(predict)):
 	#     predict[i]=int(predict[i])
@@ -56,8 +57,8 @@ def detect(url):
 	# plt.xticks(index + bar_width / 2, ('neutral', 'anger', 'surprise', 'happiness', 'disgust','fear','contempt','sadness'))
 	# plt.legend()
 	# plt.tight_layout()
-	# #plt.show()
-	# # plt.savefig('graph.png')
+	# # plt.show()
+	# plt.savefig('graph.png')
 
 	# seeing which is greater
 	if pr[0][3]>0.5:
@@ -65,4 +66,4 @@ def detect(url):
 	else:
 		return 0
 
-
+# detect("D:/Machine Learning/Dirty/RevEngineering/Django Frontend/frontend/media/webcam/webcam.png")

@@ -12,6 +12,7 @@ from webcam.lastfm_rec import nameinput
 from webcam.facemood import detect
 from webcam.movierec import get_recommendations,build_chart
 from webcam.getmood import GetMood
+from webcam.neural_style_transfer import nst 
 
 text="Outside"
 
@@ -95,17 +96,24 @@ def textinput(request):
     if 'ArticleS' in request.POST:
         screenname = request.POST.get("Article", None)
         t=GetMood(screenname)
+        if t==0:    
+            nst(0)
+            x = "You Seem Unhappy. Here is an Image of you in a Radiant Style!"
+        else:
+            nst(1)
+            x = "You Seem Happy. Here is an Image of you in a Solemn Style!"
         return render(request,'output.html',{'output':t})
-   
 
     return render(request,'textinput.html')
 
 def imgpredict(request):
     
-    predict=detect("D:/Machine Learning/Dirty/RevEngineering/Django Frontend/frontend/media/webcam/webcam.png")
-    if predict==0:
+    pred=detect("D:/Machine Learning/Dirty/RevEngineering/Django Frontend/frontend/media/webcam/webcam.png")
+    if pred==0:
+        nst(0)
         text="You are Sad :("
     else:
+        nst(1)
         text="Such a jolly person you are!"
     return render(request,'output.html',{'output': text})
 

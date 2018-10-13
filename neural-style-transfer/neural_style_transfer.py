@@ -33,7 +33,7 @@ def nst(mood):
     #net = cv2.dnn.readNetFromTorch(args["model"])
 
 
-    image = cv2.imread('images\Saurav.jpg',1)
+    image = cv2.imread('images/baden_baden.jpg',1)
 #print(image)
 #print("i")
     if(mood==0):
