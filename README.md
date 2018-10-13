@@ -43,6 +43,6 @@ pandas
 Keras
 scikit_learn_
 
-![Alt Text](https://github.com/SRMHackathon/RevEngineering/blob/master/Logos/REVlogo.jpg)
+![Alt Text](https://github.com/SRM-Hackathon/RevEngineering/blob/master/src/REVlogo.jpg)
 
 
