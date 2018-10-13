@@ -48,6 +48,23 @@ pandas
 Keras
 scikit_learn_
 
+### Screenshots
+![Alt Text](https://github.com/SRM-Hackathon/RevEngineering/blob/master/src/Untitled.png)
+
+![Alt Text](https://github.com/SRM-Hackathon/RevEngineering/blob/master/src/Untitled1.png)
+
+![Alt Text](https://github.com/SRM-Hackathon/RevEngineering/blob/master/src/Untitled1.5.png)
+
+![Alt Text](https://github.com/SRM-Hackathon/RevEngineering/blob/master/src/Untitled2.png)
+
+![Alt Text](https://github.com/SRM-Hackathon/RevEngineering/blob/master/src/Untitled3.png)
+
+![Alt Text](https://github.com/SRM-Hackathon/RevEngineering/blob/master/src/Untitled4.png)
+![Alt Text](https://github.com/SRM-Hackathon/RevEngineering/blob/master/src/Untitled5.png)
+![Alt Text](https://github.com/SRM-Hackathon/RevEngineering/blob/master/src/Untitled6.png)
+
+
+
 ### Developed with love by
 
 ![Alt Text](https://github.com/SRM-Hackathon/RevEngineering/blob/master/src/REVlogo.jpg)
