@@ -8,6 +8,7 @@ import json
 from django.views.decorators.csrf import csrf_exempt
 import re
 import base64
+from webcam.lastfm_rec import nameinput
 text="Outside"
 
 class HomePageView(TemplateView):
@@ -40,7 +41,18 @@ def imgdata(request):
 
 def emotion(request):
     text="Hey! I'm inside!"
-    return render(request,'emotion.html',{'emo':text})
+    return render(request,'index0.html')
+
+
+
+def textinput(request):
+    if 'ArticleS' in request.POST:
+        screenname = request.POST.get("Article", None)
+        t=nameinput(screenname)
+        return render(request, 'output.html' ,{'output': t})
+
+    return render(request,'textinput.html')
+
 
 def simple_upload(request):
     if request.method == 'POST' and request.FILES['myfile']:
