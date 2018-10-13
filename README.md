@@ -5,7 +5,7 @@ Made by _Abhilash Pal_, _Saurav Saha_, _Sounak Bhattacharya_, _Arko Chatterjee_,
 
 ## Problem Statement
 
-Physical fitness is the key concern of today’s generation. It is the state of well-being and the ability to perform aspects of sports for top notch athletes and daily activities and tasks for other professionals such as those in the IT sector. One can be physically fit when he/she is mentally fit. Thus the common mass also demands products that will help in maintaining and tracking their physical/mental fitness. In today's busy and competitive world, most employees tend to be mentally stressed out. Thus a system has to be made which helps in reducing the mental stress so that a person can be physically as well as mentally fit.
+Physical fitness is the key concern of today’s generation. It is the state of well-being and the ability to perform aspects of sports for top notch athletes and daily activities and tasks for other professionals such as those in the IT sector. One can be physically fit when he/she is mentally fit. Thus the common mass also demands products that will help in maintaining and tracking their physical/mental fitness. In today's busy and competitive world, most employees tend to be mentally stressed out. Thus a system has to be made which helps in reducing the mental stress so that a person can be physically as well as mentally fit. Statistics in recent times about the mental fitness of the population have provided us with some important conclusions. 1 in 5 people in the country need some kind of psychiatric or psycological attention. 45% or the corporate professionals suffer from some form of depression and this might transform into clinical depression if left unattended.
 
 ### Approach
 
@@ -24,7 +24,6 @@ People get tense during stressful situations and they require a moment of pure t
 People might start to feel sad if they probably had a bad day or things didn't go their way for some or the other thing during the day. 
 
 In all these situations people look forward to something to get out of the muck and just feel a bit better. For all these situations our recommendation system can work like a charm and cheer up the mood of our user.
-
 
 The RecomMate.ai web-app detects the user's emotions through a facial recognition system which first recognises a face from a live video feed and in turn provides the facial input to the emotion recognition engine using Keras built on a tensorflow backend. The users can also provide input in the form of text, where our sentimental analysis engine detects how positively or negatively a user is thinking or feeling by creating a proper analysis on the textual input. After detecting the emotions using text or facial input the user is recommended movies, songs, quotes and funny memes, thus helping in uplifting the mood of the user or simply maintaining the their happy state of mind.
 
