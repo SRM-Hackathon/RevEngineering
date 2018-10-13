@@ -43,6 +43,8 @@ pandas
 Keras
 scikit_learn_
 
+### Developed with love by
+
 ![Alt Text](https://github.com/SRM-Hackathon/RevEngineering/blob/master/src/REVlogo.jpg)
 
 
