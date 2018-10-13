@@ -1,5 +1,5 @@
-Made by _Abhilash Pal_, _Saurav Saha_, _Sounak_, _Arko Chatterjee_, _Sukrit Bhattacharya_
-# SRM Hackathon 2018 | RevEngineering
+Made by _Abhilash Pal_, _Saurav Saha_, _Sounak Bhattacharya_, _Arko Chatterjee_, _Sukrit Bhattacharya_
+# SRM Hackathon 2018 | RecomMate.ai | RevEngineering
 
 [Demo video]<br>
 
@@ -11,7 +11,7 @@ Physical fitness is the key concern of today’s generation. It is the state of 
 
 The system we wish to build in turn is a recommender system for betterment of mental health of the user. It takes as input the facial features or text based mood and outputs a host of media, like movies, songs and poems for the user.
 
-We will use a** Computer Vision** trained model using OpenCV to extract the facial features and Keras to detect mood from the same using a Deep Learning model and similiarly use nltk or other associated Natural Language Processing Libraries to ascertain the mood of the user from the textual input. A recommendation system is then built using Spotipy API and LastFM 360k music Dataset for the music and the IMDB Dataset for the movies part.
+We will use a** Computer Vision** trained model using OpenCV to extract the facial features and Keras to detect mood from the same using a Deep Learning model and similiarly use nltk or other associated Natural Language Processing Libraries to ascertain the mood of the user from the textual input. A recommendation system is then built using LastFM 360k music Dataset for the music and the IMDB Dataset for the movies part.
 
 We also use Neural Style Transfer to apply a filter on the image of the user using Deep Learning in OpenCV. The poetry recommendation system runs using a self built dataset and a model to recommend poems based on specific query words.
 
