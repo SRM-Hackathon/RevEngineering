@@ -19,12 +19,14 @@ We wish to deploy the model using Django for a WebApp.
 
 ### Application
 
-A Recommendation System web app has been made which detects expressions of the user either by facial expression or a text input by the user and in return recommends movies, songs, quotes and funny memes in accordance with the emotions of the user, thus helping in uplifting the mood of the user.
+A Recommendation System web app which has been made detects facial expressions of the user either by facial recognition system or a text input by the user and in return recommends movies, songs, quotes and funny memes in accordance with the emotions of the user, thus helping in uplifting the mood of the user.
 
 ### Usage
 
 ```bash
-make
+git clone
+cd
+python manage.py runserver
 ```
 
 This will start the local server at localhost:8000.
