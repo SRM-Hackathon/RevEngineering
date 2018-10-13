@@ -25,6 +25,10 @@ def webcam(request):
 
     return render(request, 'webcam.html')
 
+def about(request):
+
+    return render(request, 'about.html')
+
 
 @csrf_exempt
 def imgdata(request):
@@ -42,6 +46,8 @@ def imgdata(request):
 def emotion(request):
     text="Hey! I'm inside!"
     return render(request,'index0.html')
+
+
 
 
 

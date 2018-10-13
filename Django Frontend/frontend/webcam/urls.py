@@ -12,6 +12,7 @@ urlpatterns = [
     url(r'^simple_upload/$', views.simple_upload, name='simple_upload'),
     url(r'^emotion/$', views.emotion, name='emotion'),
     url(r'^textinput/$', views.textinput, name='textinput'),
+    url(r'^about/$', views.about, name='about'),
 
     #path('output', views.output, name='output'),
 ]

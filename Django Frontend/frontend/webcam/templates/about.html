@@ -1,13 +1,13 @@
 <!-- djangotemplates/example/templates/about.html-->
 
-<!DOCTYPE html>
+<{% load static %}!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>About Us</title>
 </head>
-<body>
+<body style="background-image: url('{% static "images/back.jpg"%}')";>
   <h3>About Page</h3>
-<sh3>  <a href="{% url 'about' %}">About This Site</a></h3>
+<h3>  <a href="{% url 'emotion' %}">Return to Home</a></h3>
 </body>
 </html>
