@@ -41,6 +41,8 @@ textblob
 Django
 pandas
 Keras
-scikit_learn 
+scikit_learn_
+
+![Alt Text](https://github.com/SRMHackathon/RevEngineering/blob/master/Logos/REVlogo.jpg)
 
 
